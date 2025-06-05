@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instructions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .instructions-container {
+      width: 600px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    ul {
+      list-style-type: disc;
+      margin: 20px;
+      padding: 0;
+      color: #555;
+    } 
+    li {
+      margin-bottom: 10px;
+    }
+    button {
+      display: block;
+      width: 200px;
+      margin: 20px auto 0;
+      padding: 10px;
+      font-size: 1em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="instructions-container">
+    <h2>Instructions</h2>
+    <ul>
+      <li>Ensure you are in a quiet, well-lit room.</li>
+      <li>Webcam access is required throughout the exam.</li>
+      <li>Any sudden movements will be flagged by the AI proctor.</li>
+      <li>You have 10 minutes to complete the exam.</li>
+      <li>Attempt all questions and click 'Submit' once you are done.</li>
+    </ul>
+    <button onclick="startExam()">Start Exam</button>
+  </div>
+
+  <script>
+    function startExam() {
+      window.location.href = 'quiz.html';
+    }
+  </script>
+</body>
+</html>

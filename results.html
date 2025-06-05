@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Results</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+    }
+    h1 {
+      margin-top: 0;
+    }
+    .score {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    .message {
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Exam Results</h1>
+    <div class="score" id="score"></div>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    function getQueryParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    const score = getQueryParameter('score');
+    const scoreElement = document.getElementById('score');
+    const messageElement = document.getElementById('message');
+
+    scoreElement.textContent = `Your Score: ${score}`;
+
+    let message = '';
+    
+    if (score == 3) {
+      message = 'Excellent! You are selected for International Hackathon.';
+    } else if (score == 2) {
+      message = 'Good job! You are selected for National Hackathon.';
+    } else if (score == 1) {
+      message = 'Better Luck next time. Keep trying!';
+    } else {
+      message = 'You did not get any answers correct. Better luck next time!';
+    }
+
+    messageElement.textContent = message;
+  </script>
+</body>
+</html>
